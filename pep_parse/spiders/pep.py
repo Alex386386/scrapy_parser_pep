@@ -22,7 +22,7 @@ class PepSpider(scrapy.Spider):
 
     def parse_pep(self, response):
         number = response.xpath(
-            '//*[@id="pep-page-section"]/header/ul/li[3]').re('\d+')[0]
+            '//*[@id="pep-page-section"]/header/ul/li[3]').re(r'\d+')[0]
         name = response.css('h1.page-title::text').get()
         status = response.xpath(
             'string(//dt[contains(text(), "Status")]/following-sibling::dd[1])'
