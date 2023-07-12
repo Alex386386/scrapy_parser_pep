@@ -45,7 +45,7 @@ python3 -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Введите команду:
+Для запуска парсинга и получения результатов, введите команду:
 
 ```
 scrapy crawl pep
